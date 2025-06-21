@@ -1,15 +1,12 @@
-# To handle book stats
-
-def get_word_count(book_text):
-    words = book_text.split()
-    word_count = len(words)
-    return f"{word_count} words found in the document"
+def get_num_words(text):
+    words = text.split()
+    return len(words)
 
 
-def get_chars_count(text):
+def get_chars_dict(text):
     chars = {}
-    for character in text:
-        lowered = character.lower()
+    for c in text:
+        lowered = c.lower()
         if lowered in chars:
             chars[lowered] += 1
         else:
